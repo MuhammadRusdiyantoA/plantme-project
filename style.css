@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFF1E7;
+}
+
+p, h1 {
+    cursor: default;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+nav {
+    display: flex;
+    background-color: #DDBFA9;
+    height: 50px;
+    align-items: center;
+    padding : 0 20px;
+}
+
+nav h1 {
+    cursor: default;
+    letter-spacing: 5px;
+    margin-right: 20px;
+    color: white;
+}
+
+nav input {
+    opacity: 0.5;
+    background-color: #DDBFA9;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid white;
+    box-shadow: none;
+    outline: none;
+    color: white;
+    width: 300px;
+    letter-spacing: 2px;
+    transition: 300ms ease-out;
+    font-size: medium;
+}
+
+nav input:hover {
+    opacity: 0.6;
+    transition: 300ms ease-out;
+}
+
+nav input:focus {
+    background-color: #DDBFA9;
+    opacity: 1;
+    transition: 300ms ease-out;
+}
+
+nav input::placeholder {
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    align-items: center;
+    /* properti float gak bisa dipake buat flex, coba pake justify content = flex end, dokumentasi ada di stackoverflow*/
+    justify-content: flex-end;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    padding: 5px 10px;
+    font-weight: 500;
+    transition: 200ms ease-out;
+}
+
+nav ul li a:hover {
+    color: black;
+    transition: 200ms ease-out;
+}
+
+nav ul li a.sign-in {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    letter-spacing: 2px;
+}
+
+nav ul li a.sign-in:hover {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
+}
+
+main {
+    margin-top: 50px;
+}
+
+.home {
+    display: flex;
+    scroll-margin: 50px;
+    height: 720px;
+}
+
+.box-left {
+    background-color: #FFE7D5;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.box-left-content {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+
+.box-left-content h1 {
+    font-size: xx-large;
+}
+
+.box-left-content p {
+    font-size: larger;
+    margin: 0px 10%;
+}
+
+.box-left-content a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    background-color: #DDBFA9;
+    border-radius: 2px;
+    margin: 25px;
+    font-size: large;
+    transition: 200ms ease-out;
+}
+
+.box-left-content a:hover {
+    box-shadow: 0 0 0 30px inset white;
+    color: black;
+    transition: 200ms ease-out;
+}
+
+.box-right {
+    width: 50%;
+    background: url(/assets/houseplants-scaled-e1593515074870.jpeg);
+    background-size: cover;
+}
+
+.right-text {
+    opacity: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: 350ms ease-in;
+}
+
+.right-text:hover {
+    opacity: 1;
+    transition: 250ms ease-out;
+}
+
+.right-text p {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-size: larger;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-75px);
+    transition: 200ms ease-in;
+}
+
+.right-text .website {
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+.right-text p:hover {
+    transform: translateX(0px);
+    transition: 200ms ease-out;
+}
+
+.buy {
+    text-align: center;
+    margin-top: 10%;
+    scroll-margin: 115px;
+}
+
+.buy h1 {
+    margin-bottom: 4%;
+    font-size: xX-large;
+}
+
+.seller-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seller-box img {
+    /* sweet spot ea :v */
+    width: 250px;
+    height: 400px;
+}
+
+/* Targetnya itu yang ada di div top*/
+.seller-box p.name {
+    margin-top: 6%;
+    font-weight: 300;
+    font-size: large;
+}
+
+.seller-box p {
+    font-weight: 600;
+    font-size: larger;
+}
+
+.top-1, .top-2, .top-3 {
+    margin: 0 3%;
+    background: white;
+    padding-bottom: 1.5%;
+    color: black;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px 1px;
+    transition: 250ms ease-out;
+}
+
+.top-1:hover, .top-2:hover, .top-3:hover {
+    transform: translateX(-10px) translateY(-10px);
+    transition: 250ms ease-out;
+    box-shadow: rgba(0, 0, 0, 0.2) 15px 15px 15px 1px;
+}
+
+.blog {
+    margin-top: 10%;
+    margin-right: 26%;
+    margin-left: 26%;
+    margin-bottom: 10%;
+    scroll-margin: 55px;
+    text-align: center;
+}
+
+.blog-box {
+    padding: 5% 0px;
+    background-color: #FFE7D5;
+    box-shadow: rgba(0, 0, 0, 0.15) 7px 7px 5px 1px;
+}
+
+.blog-box h1 {
+    margin-bottom: 40px;
+}
+
+.blog-box img {
+    width: auto;
+    height: 400px;
+    transition: 300ms ease-in;
+}
+
+.blog-box img:hover {
+    transform: perspective(100px) translateZ(4px);
+    transition: 300ms ease-out;
+}
+
+.blog-box p {
+    margin: 25px 75px;
+}
+
+.blog-box a {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    background-color: #DDBFA9;
+    transition: 350ms ease-out;
+}
+
+.blog-box a:hover {
+    box-shadow: white inset 150px 0 0 0;
+    transition: 200ms ease-out;
+    color: black;
+}
+
+.kit {
+    scroll-margin: 160px;
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 100%;
+}
+
+.kit-left {
+    width: 50%;
+    height: 100%;
+    background: url(/assets/gardening-kit.jpg);
+    background-size: cover;
+}
+
+.kit-text {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    transition: 350ms ease-in;
+    overflow: hidden;
+}
+
+.kit-text p {
+    font-weight: 800;
+    font-size: x-large;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(125px);
+    transition: 350ms ease-in;
+}
+
+.kit-text:hover {
+    opacity: 1;
+    transition: 250ms ease-out;
+}
+
+.kit-text p:hover {
+    transform: translateX(0px);
+    transition: 350ms ease-out;
+}
+
+.kit-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFE7D5;
+    height: 100%;
+    text-align: center;
+}
+
+.kit-right a {
+    margin-top: 25px;
+    text-decoration: none;
+    color: white;
+    background-color: #DDBFA9;
+    padding: 5px 20px;
+    transition: 250ms ease-in;
+}
+
+.kit-right a:hover {
+    background-color: white;
+    color: black;
+    transition: 250ms ease-out;
+}
+
+.merch {
+    scroll-margin: 100px;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.merch h1 {
+    margin-bottom: 3%;
+}
+
+.merch-box {
+    color: white;
+}
+
+.merch-items {
+    display: flex;
+    justify-content: center;
+}
+
+.merch-items img {
+    height: 325px;
+    width: auto;
+}
+
+.merch-items .name {
+    font-weight: 400;
+    margin-top: 5%;
+}
+
+.merch-items p {
+    font-weight: 600;
+    font-size: larger;
+}
+
+.merch-1, .merch-2, .merch-3 {
+    background-color: #DDBFA9;
+    padding-bottom: 1.3%;
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px 1px;
+    transition: 250ms ease-out;
+    margin: 0 3%;
+}
+
+.merch-1:hover, .merch-2:hover, .merch-3:hover {
+    transform: translateX(-10px) translateY(-10px);
+    transition: 250ms ease-out;
+    box-shadow: rgba(0, 0, 0, 0.2) 15px 15px 15px 1px;
+}
+
+.merch-offer {
+    margin: 4% 20% 0;
+    padding: 2% 10%;
+    background-color: #DDBFA9;
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px 1px;
+}
+
+.merch-offer a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    text-shadow: white 0 0 10px;
+    transition: 300ms ease-in;
+}
+
+.merch-offer a:hover {
+    color: black;
+    text-shadow: black 0 0 10px;
+    transition: 300ms ease-out;
+}
+
+.subs {
+    margin: 10% 20%;
+    text-align: center;
+}
+
+.subs-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFE7D5;
+    width: 100%;
+    height: 350px;
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 5px 1px;
+}
+
+.subs-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+    background: url(/assets/images.jpg);
+    background-size: cover;
+}
+
+.subs-content {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 8% 2%;
+}
+
+.subs-content a {
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #DDBFA9;
+    margin-top: 30px;
+    transition: 250ms ease-in;
+}
+
+.subs-content a:hover {
+    color: black;
+    box-shadow: inset 0 35px 0 0 white;
+    transition: 250ms ease-out;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    background-color: #FFE7D5;
+}
+
+.footer p {
+    margin-top: 1%;
+}
+
+.first, .second, .third {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.first a, .second a, .third a{
+    margin: 1% 3%;
+    text-decoration: none;
+    color: black;
+    transition: 200ms ease-in;
+}
+
+.first a:hover, .second a:hover, .third a:hover {
+    text-shadow: black 0 0 5px;
+    transition: 200ms ease-out;
+}
